@@ -1,0 +1,125 @@
+
+/* Assignment 5.4: CSS Variables and Design Tokens */
+
+:root {
+    /* Color variables */
+    --primary-color: #dc2626;
+    --secondary-color: #14b8a6;
+    --background-color: #f1f5f9;
+    --text-color: #1e293b;
+    --white-color: #ffffff;
+
+    /* Spacing variables */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+
+    /* Font-size variables */
+    --font-small: 14px;
+    --font-medium: 18px;
+    --font-large: 32px;
+
+    /* Other design tokens */
+    --border-radius: 10px;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: var(--spacing-large);
+}
+
+.header h1 {
+    font-size: var(--font-large);
+    margin-bottom: var(--spacing-small);
+}
+
+.header p {
+    font-size: var(--font-medium);
+}
+
+/* Buttons */
+.btn {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-small);
+    margin: var(--spacing-small);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.btn-secondary {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: var(--spacing-large) auto;
+    padding: 0 var(--spacing-medium);
+}
+
+.intro {
+    margin-bottom: var(--spacing-large);
+}
+
+.intro h2 {
+    color: var(--primary-color);
+    font-size: var(--font-large);
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    background-color: var(--white-color);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    font-size: var(--font-medium);
+}
+
+.card p {
+    font-size: var(--font-small);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+}
